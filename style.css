@@ -1,0 +1,30 @@
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flex{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+input{
+  width:200px;
+  padding:10px 25px ;
+  margin:15px;
+}
+button{
+  align-self: center;
+  width: 250px;
+  padding:10px 25px ;
+  margin: 15px;
+}
+audio{
+  position: relative;
+  
+}

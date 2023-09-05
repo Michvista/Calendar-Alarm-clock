@@ -56,6 +56,8 @@ const hoursNum = [
   setTimeForAlarm = `${dateValue.value} ${timeValue.value}`
   let compareValues = `${year}-${month}-${date} ${hours}:${mins}`
 if (setTimeForAlarm == compareValues) {
+  audio.play();
+  clearInterval(intervalId)
   Notification.requestPermission().then(perm => {
     if (perm === "granted") {
       new Notification("Alarm time reached", {
@@ -63,8 +65,6 @@ if (setTimeForAlarm == compareValues) {
       })
     }
   })
-  audio.play();
-  clearInterval(intervalId)
 }
 
 }

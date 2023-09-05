@@ -49,12 +49,14 @@ const hoursNum = [
   const month = months[currentTime.getMonth()];
   const year = currentTime.getFullYear()
 
-  p.innerHTML = `
-    Time&Date: ${year}-${month}-${date} ${hours}:${mins}:${secs}
+   const trueDate = date.toString().padStart(2, '0')
+p.innerHTML = `
+      Time&Date: ${year}-${month}-${trueDate} ${hours}:${mins}:${secs}
   `;
 
   setTimeForAlarm = `${dateValue.value} ${timeValue.value}`
-  let compareValues = `${year}-${month}-${date} ${hours}:${mins}`
+  let compareValues = `${year}-${month}-${trueDate} ${hours}:${mins}`
+  console.log(year, month, trueDate, hours, mins, dateValue.value, timeValue.value)
 if (setTimeForAlarm == compareValues) {
   audio.play();
   clearInterval(intervalId)
